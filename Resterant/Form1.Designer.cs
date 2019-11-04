@@ -51,6 +51,7 @@
             this.outputChange = new System.Windows.Forms.Label();
             this.outputChange2 = new System.Windows.Forms.Label();
             this.outputLabel = new System.Windows.Forms.Label();
+            this.newCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.textboxQuiche)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textboxMacaroni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textboxGrilled)).BeginInit();
@@ -246,12 +247,23 @@
             this.outputLabel.Size = new System.Drawing.Size(303, 322);
             this.outputLabel.TabIndex = 36;
             // 
+            // newCustomer
+            // 
+            this.newCustomer.Location = new System.Drawing.Point(287, 370);
+            this.newCustomer.Name = "newCustomer";
+            this.newCustomer.Size = new System.Drawing.Size(235, 32);
+            this.newCustomer.TabIndex = 37;
+            this.newCustomer.Text = "newCustomer";
+            this.newCustomer.UseVisualStyleBackColor = true;
+            this.newCustomer.Click += new System.EventHandler(this.NewCustomer_Click);
+            // 
             // outputSubtotal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(819, 414);
+            this.Controls.Add(this.newCustomer);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.outputChange2);
             this.Controls.Add(this.outputChange);
@@ -312,6 +324,7 @@
         private System.Windows.Forms.Label outputChange;
         private System.Windows.Forms.Label outputChange2;
         private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.Button newCustomer;
     }
 }
 

@@ -36,6 +36,8 @@ namespace Resterant
 
         public outputSubtotal()
         {
+            int reset;
+            reset = 0;
             InitializeComponent();
         }
 
@@ -114,43 +116,68 @@ namespace Resterant
             //orders
            
 
-            player.Play();
-            g.DrawString("\n\nQuiche     " + "x" + numberofQuiche + "   " + costofQuiche.ToString("C"), drawFont, blackBrush, 18, 8);
+            player.Play(); 
+            g.DrawString("\n\nQuiche    " + "x" + numberofQuiche + "    " + costofQuiche.ToString("C"), drawFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\nMacaroni  " + "x" + numberofMacaroni +  "   " + costofMacaroni.ToString("C"), drawFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\nMacaroni " + "x" + numberofMacaroni +  "    " + costofMacaroni.ToString("C"), drawFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\nBread " + "x" + numberofGrilled + "   " + costofGrilled.ToString("C"), drawFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\nBread " + "x" + numberofGrilled + "         " + costofGrilled.ToString("C"), drawFont, blackBrush, 18, 8);
 
             //subtotal tax and total
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\n\n\nSubtotal" + subtotal.ToString("C"), drawFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\nSubtotal          " + subtotal.ToString("C"), drawFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\n\n\n\nTax" + tax.ToString("C"), drawFont, blackBrush,18 , 8);
+            g.DrawString("\n\n\n\n\n\n\nTax                 " + tax.ToString("C"), drawFont, blackBrush,18 , 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\n\n\n\n\nTotal" + Total.ToString("C"), drawFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\n\n\nTotal               " + Total.ToString("C"), drawFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
             //cash tendered and change back 
             player.Play();
-            g.DrawString("\n\n\n\n\n\n\n\n\nTendered" + Tendered.ToString("C"), drawFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\n\n\n\nTendered        " + Tendered.ToString("C"), drawFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\n\n\n\n\n\n\nCash Back" + change.ToString("C"), drawFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\n\n\n\n\nCash Back      " + change.ToString("C"), drawFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThankyou for coming to tryones home cooking", smallFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThankyou for coming to tryones home cooking ", smallFont, blackBrush, 18, 8);
             Thread.Sleep(450);
             player.Play();
-            g.DrawString("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCome again or call in", smallFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCome again or call in ", smallFont, blackBrush, 18, 8);
             //player.Play();
             Thread.Sleep(450);
 
-            g.DrawString("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n519-275-4444", smallFont, blackBrush, 18, 8);
+            g.DrawString("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n519-275-4444 ", smallFont, blackBrush, 18, 8);
+
+
+        }
+
+        private void NewCustomer_Click(object sender, EventArgs e)
+        {
+            //graphic settings 
+            Graphics g = outputLabel.CreateGraphics();
+            g.Clear(Color.White);
+
+            //resetting values 
+            textboxQuiche.Text = "";
+            textboxGrilled.Text = "";
+            textboxMacaroni.Text = "";
+
+            numberofQuiche = 0;
+            numberofMacaroni = 0;
+            numberofGrilled = 0;
+
+            labelSubtotal.Text = "";
+            labelTax.Text = "";
+            labelTotal.Text = "";
+
+            textboxTendered.Text = "";
+            outputChange2.Text = "";
         }
     }
     }
